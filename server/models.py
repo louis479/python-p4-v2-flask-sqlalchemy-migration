@@ -17,6 +17,9 @@ class Employee(db.Model):
     name = db.Column(db.String, nullable=False)
     salary = db.Column(db.Integer)
 
+    def __repr__(self):
+        return f'<Employee {self.id}, {self.name}, {self.salary}>'
+
 class Department(db.Model):
     __tablename__ = 'departments'
 
@@ -25,6 +28,6 @@ class Department(db.Model):
     address = db.Column(db.String)
     
     def __repr__(self):
-        return f'<Employee {self.id}, {self.name}, {self.salary}>'
+        return f'<Employee {self.id}, {self.name}, {self.address}>'
 
 
